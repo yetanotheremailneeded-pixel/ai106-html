@@ -3,34 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AI106 HTML project boilerplate" />
-    <title>AI106 HTML</title>
+    <meta name="description" content="Portfolio website for a frontend developer with a definitions library." />
+    <title>Frontend Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <h1>AI106 HTML</h1>
-      <p class="tagline">Starter boilerplate — edit and build from here.</p>
-    </header>
+    <main class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Frontend Developer</span>
+          <h1>Designing polished web experiences with clean code.</h1>
+          <p class="hero-text">
+            I build modern portfolio websites and interactive web apps using semantic HTML, responsive CSS, and JavaScript-powered UI.
+          </p>
+          <div class="hero-actions">
+            <a href="#definitions" class="button">View Definitions</a>
+            <a href="#projects" class="button button-secondary">Explore Projects</a>
+          </div>
+        </div>
 
-    <main id="main">
-      <section class="card" aria-labelledby="welcome-heading">
-        <h2 id="welcome-heading">Welcome</h2>
-        <p>
-          This project includes separate HTML, CSS, and JavaScript files. Open
-          <code>index.html</code> in a browser or use a local dev server to
-          get started.
-        </p>
-        <button type="button" id="demo-button" class="button">
-          Try the demo
-        </button>
-        <p id="demo-output" class="demo-output" aria-live="polite"></p>
+        <aside class="hero-panel card">
+          <div class="panel-header">
+            <p class="panel-label">Brand palette</p>
+            <h2>Colors</h2>
+          </div>
+          <div class="color-swatch-grid">
+            <div class="swatch swatch-dark"><span>#444a54</span></div>
+            <div class="swatch swatch-primary"><span>#238fb2</span></div>
+            <div class="swatch swatch-soft"><span>#85bccf</span></div>
+            <div class="swatch swatch-white"><span>#ffffff</span></div>
+          </div>
+        </aside>
+      </header>
+
+      <section class="section about" id="about">
+        <div class="content-grid">
+          <div class="card">
+            <h2>About me</h2>
+            <p>
+              I'm a frontend developer specialized in building web applications that feel elegant, accessible, and easy to use. My work blends type-led design with responsive layouts and smooth interactive details.
+            </p>
+            <p>
+              I enjoy turning ideas into polished interfaces, keeping every component rounded, layered, and balanced with thoughtful spacing.
+            </p>
+          </div>
+
+          <div class="card highlight-card">
+            <h3>Core skills</h3>
+            <ul>
+              <li>Responsive UI design</li>
+              <li>JS interaction &amp; state</li>
+              <li>Semantic HTML</li>
+              <li>Design systems</li>
+            </ul>
+          </div>
+        </div>
       </section>
-    </main>
 
-    <footer class="site-footer">
-      <p>&copy; <span id="year"></span> AI106 HTML</p>
-    </footer>
+      <section class="section projects" id="projects">
+        <div class="section-header">
+          <h2>Selected projects</h2>
+          <p>Examples of modern, polished frontend work that focus on clarity, structure, and interaction.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card card">
+            <h3>Portfolio Showcase</h3>
+            <p>Create an elegant portfolio layout with a strong visual hierarchy and refined typography.</p>
+            <span class="project-tag">Design / HTML</span>
+          </article>
+
+          <article class="project-card card">
+            <h3>Interactive Toolkit</h3>
+            <p>Build a searchable definitions library for onboarding and documentation references.</p>
+            <span class="project-tag">JavaScript / UX</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section library" id="definitions">
+        <div class="section-header">
+          <h2>Definitions library</h2>
+          <p>Search essential frontend terms and review living definitions for the modern web.</p>
+        </div>
+
+        <div class="card library-card">
+          <label class="search-group" for="term-search">
+            <span>Search terms</span>
+            <input id="term-search" type="search" placeholder="Type a keyword..." />
+          </label>
+
+          <div id="definition-list" class="definition-grid" aria-live="polite"></div>
+          <p class="note">Tap any term to review the definition and strengthen your frontend vocabulary.</p>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Portfolio by a frontend developer.</p>
+      </footer>
+    </main>
 
     <script src="js/main.js" defer></script>
   </body>
